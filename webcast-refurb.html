@@ -1,0 +1,143 @@
+<style type="text/css">
+		.chat-client-cell {
+			vertical-align: top !important;
+			width:calc(50% - 1px);
+			display:inline-block;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-top: 0px;
+			padding-right: 0px;
+			position: relative;
+		}
+		.chat-client-background {
+			width: 100%;
+			position:relative;
+			background-color:#444444
+		}
+		.chat-client-cell .chat-client-container {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: none;
+			}
+		.not-logged-in-message {
+			width: calc(100% - 15px);
+			text-align: center;
+			color: #444;
+			font-size: 16px;
+			padding:7px;
+			background: #fff;
+			margin-top: 1px;
+			border:solid 1px #444;
+			display: none;
+			}
+		.not-logged-in-message .login-link:hover {
+			text-decoration: underline;
+			}
+		.not-logged-in-message .login-link {
+			color:#f99d1c;
+			font-weight: bold;
+			display: inline-block;
+			}
+	.right-wrapper{
+		width:50%;
+			display:inline-block;
+			vertical-align:top;
+	}
+		.video-block{
+			
+			border-top:solid 17px #444;
+			padding-top:3px;
+			background:#888;
+		}
+               .vidyard_player {
+                        position: relative;
+				   left:-1px;
+                        width: 100%;
+                        display: block;
+                        padding-top: 56.25%;
+				   background:#eee;
+               }
+               span[id^="vidyard_span"] {
+                        position: absolute !important;
+                        top: 0;
+                        left: 0;
+                        height: 100% !important;
+                        width: 100% !important;
+               }
+		.banner-callouts{
+			font-size:12px;
+			background:#eee;
+			padding:7px;
+			text-align:center;
+		}
+		.livestream-title{
+			font-size:20px;
+			font-weight:bold;
+			color:#b8d757;
+			text-align:center;
+			padding:20px;
+			background:#444;
+		}
+		.content-parent{
+			border: solid 1px #444;
+			background:#444;
+		}
+		.session-description{
+			padding:20px 40px;
+			background:white;
+		}
+</style>
+
+<div class="content-parent">
+  <div class="livestream-title">SolarWinds Backup LiveCast</div>
+    <div class="banner-callouts">This event is streaming in HD.  If you are having trouble viewing, please adjust the quality settings in the player to match your available network bandwidth. For additional help, check our <a href="https://thwack.solarwinds.com/community/solarwinds-community/community-events-webcasts-and-training/virtual-live-event-faqs" target="_blank">FAQ</a>. <!--<br>Don't forget to let us know what you think with this quick <a href="https://www.surveygizmo.com/s3/3993972/SolarWinds-Lab-59">survey</a>.--></div>
+    <div class="not-logged-in-message">
+      <div class="message">Please <a class="login-link" style="" href="#">Log In</a> to THWACK to participate.</div>
+    </div>
+    
+    <div class="right-wrapper"><div class="video-block">
+      <script type="text/javascript" id="vidyard_embed_code_it6Tg2gaNzxznPLC7LUfX1" src="//play.vidyard.com/it6Tg2gaNzxznPLC7LUfX1.js?v=3.1.1&type=inline"></script>
+    </div>
+	<div class="session-description">
+		
+		Orion is critical to your success. Why not be sure it’s safely backed up and fully recoverable?<br><br>
+
+		This LiveCast will show you step-by-step how to take control of the recoverability of your Orion database and applications with SolarWinds Backup. Head Geek Thomas LaRock and Backup SE Kevin Miele will show you the way, and because it’s a LiveCast, you can chat it real time with your fellow THWACK community members.</div>
+		</div>
+	<div class="chat-client-cell">
+      <div class="chat-client-background">
+        <div id="my-chat-client" style="min-height: 614px;">Chat client goes here</div>
+      </div>
+    </div>
+</div>
+
+<!-- PASTE THE EMBED SCRIPT HERE...example below -->
+<script type="text/javascript">
+$j.getScript("/api/rumbletalk/rooms/596267/embed?divId=my-chat-client&nc=" + new Date().getTime())
+</script>
+
+<script type="text/javascript">
+$j(document).ready(function() {
+try {
+  var resizeFn = function() { 
+    var maxHeight = $j(".right-wrapper").height() - 17;
+    $j("#my-chat-client iframe").css("max-height", maxHeight + "px"); 
+    if ($j("#my-chat-client iframe").height() < maxHeight) {
+      $j("#my-chat-client iframe").height(maxHeight);
+    }
+  }
+  var initResize = function() {
+    if(!$j("#my-chat-client iframe").exists()) {
+      setTimeout(initResize, 200);
+      return;
+    }   
+    resizeFn();
+  }
+ $j(window).on('resize', resizeFn);
+  initResize();
+} catch(e) {}
+});
+</script>
